@@ -5,6 +5,7 @@
 #include <sys/shm.h>
 #include <sys/ipc.h>
 #include <unistd.h>
+#define BUFFERSIZE 4
 
 struct studentInfo
 {
@@ -59,14 +60,14 @@ int main()
     {
         pause();
         i = data->out;
-        printf("Enter Student Information :\n");
+        printf("** Student Information **\n");
         printf("Name : %s\n", (data->buffer[i]).name);
         printf("Roll Number : %s\n", (data->buffer[i]).roll);
         printf("Age : %d\n", (data->buffer[i]).age);
         printf("Section : %s\n", (data->buffer[i]).section);
         data->out = data->out + 1;
         kill(data->prid, SIGUSR1);
-    } while (1);
+    } while (i < BUFFERSIZE - 1);
 
     printf("Consumer Program Exting...\n");
 }
