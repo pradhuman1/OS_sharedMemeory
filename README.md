@@ -1,4 +1,4 @@
-# OS_sharedMemeory
+# OS_sharedMemory
 
 Given Project contains following Solution :-
 - Implement a solution to the bounded-buffer producer-consumer problem using only two shared
@@ -16,14 +16,14 @@ Now, implement the following on the top of the above solution :-
 
 Type the following commands in sequence
 
-`git clone https://github.com/pradhuman1/OS_sharedMemeory.git`<br />
-`cd OS_sharedMemeory`<br />
+`git clone https://github.com/pradhuman1/OS_sharedMemory.git`<br />
+`cd OS_sharedMemory`<br />
 `gcc -o consumer consumer.c`<br />
 `./consumer`<br />
 
 Now open one more terminal and enter the following commands
 
-`cd OS_sharedMemeory`<br />
+`cd OS_sharedMemory`<br />
 `gcc -o producer producer.c`<br />
 `./producer`<br />
 
