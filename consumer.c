@@ -66,6 +66,21 @@ int main()
         printf("Age : %d\n", (data->buffer[i]).age);
         printf("Section : %s\n", (data->buffer[i]).section);
         data->out = data->out + 1;
+        FILE *fp;
+        fp = fopen("csv_consumer.csv", "a+");
+        int size=0;
+        if (fp)
+        {
+            fseek(fp, 0, SEEK_END);
+            size = ftell(fp);
+        }
+        if(size==0){
+            fprintf(fp, "Name,Roll Number,Age,Section");
+        }
+        fclose(fp);
+
+        fp = fopen("csv_consumer.csv", "a+");
+        fprintf(fp, "\n%s,%s,%d,%s", (data->buffer[i]).name, (data->buffer[i]).roll, (data->buffer[i]).age, (data->buffer[i]).section);
         kill(data->prid, SIGUSR1);
     } while (i < BUFFERSIZE - 1);
 
