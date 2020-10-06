@@ -12,19 +12,19 @@ Now, implement the following on the top of the above solution :-
 - Producer process, on each iteration, takes details of a student (name, enroll no, section, age etc.) from the user and puts this data as an item into the shared buffer. 
 - The consumer process on the other hand, on each of its iteration, retrieves a data item from the buffer and saves it in a CSV file on the disk, where the fields (name, enroll no. etc.) of a data-item are stored in comma-separated format (as usually stored in CSV).
 
-##HOW TO RUN
+## HOW TO RUN
 
 Type the following commands in sequence
 
-`git clone https://github.com/pradhuman1/OS_sharedMemeory.git`
-`cd OS_sharedMemeory`
-`gcc -o consumer consumer.c`
-`./consumer`
+`git clone https://github.com/pradhuman1/OS_sharedMemeory.git`<br />
+`cd OS_sharedMemeory`<br />
+`gcc -o consumer consumer.c`<br />
+`./consumer`<br />
 
 Now open one more terminal and enter the following commands
 
-`cd OS_sharedMemeory`
-`gcc -o producer producer.c`
-`./producer`
+`cd OS_sharedMemeory`<br />
+`gcc -o producer producer.c`<br />
+`./producer`<br />
 
 Now you are good to go.Enter details in producer program and you will see them printed in consumer
