@@ -24,7 +24,7 @@ typedef struct
     int out;
     int prid;
     int cnid;
-    struct studentInfo buffer[10];
+    struct studentInfo buffer[BUFFERSIZE];
 } mydata;
 
 void my_handler() {}
